@@ -55,3 +55,8 @@ let value = {
     population: 1212121212,
     primary: true
 };
+let customer = {
+    name: "tejas",
+    age: 12,
+    email: "example@test.com"
+};

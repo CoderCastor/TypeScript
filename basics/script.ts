@@ -94,3 +94,21 @@ let value : CapitalinCities = {
     population : 1212121212,
     primary : true
 }
+
+// ---------------------------------------------------
+// type aliases
+
+type Human = {
+    name : string,
+    email : string
+    age : number,
+ }
+ 
+ let customer : Human = {
+     name : "tejas",
+     age : 12,
+     email : "example@test.com"  
+ }
+
+
+
