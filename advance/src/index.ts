@@ -133,7 +133,6 @@
 // type MyUnion = number | string | boolean
 // type newType = Exclude<MyUnion,number>
 
-
 // type Shape =
 //   | { kind: "circle"; radius: number }
 //   | { kind: "square"; x: number }
@@ -144,15 +143,11 @@
 //   let obj : T3 = {kind:"circle",radius:12}
 //   let obj1 : T3 = {kind:"triangle",x:12,y:12}
 
-
 // const updateProfile = (id: number,name : string) => {
 //   return {id,name}
 // }
 
 // type getParameters = Parameters<typeof updateProfile>
-
-
-
 
 // console.log(parameters)
 
@@ -160,3 +155,32 @@
 //   constructor(a: number, b: string) {}
 // }
 // type T3 = ConstructorParameters<typeof C>;
+
+type getUserName = (userInfo: {
+  name: string;
+  contact: string;
+  Village: string;
+}) => string
+
+type returnType = ReturnType<getUserName>
+
+const newFunc = ():returnType => {
+  return 'codercastor'
+}
+
+
+class User {
+  constructor(public id:string,public name:string,public age:number){
+  }
+}
+
+type UserInstanceType = InstanceType<typeof User>
+
+let user1 : UserInstanceType = {
+  id:"",
+  age:12,
+  name:"Kushagra"
+}
+
+
+
